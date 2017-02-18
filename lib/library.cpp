@@ -1,7 +1,18 @@
-#include "library.h"
+#include "libobj-mini-priv.h"
+#include "public/libobj-mini.h"
 
-#include <iostream>
+ObjMini::ObjMini(std::string f) :
+        p(new ObjMiniImpl(f))
+{
 
-void hello() {
-    std::cout << "Hello, World!" << std::endl;
+}
+
+ObjMini::~ObjMini()
+{
+    delete p;
+}
+
+ObjMiniImpl::ObjMiniImpl(std::string f)
+{
+    this->f = f;
 }
