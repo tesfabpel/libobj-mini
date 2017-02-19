@@ -4,6 +4,8 @@
 #include <string>
 #include <memory>
 
+#include "ds.h"
+
 class ObjMiniImpl;
 
 class ObjMini
@@ -11,6 +13,8 @@ class ObjMini
 public:
     explicit ObjMini(std::string f);
     ~ObjMini();
+	
+	void run();
 
 private:
     ObjMiniImpl *p;
